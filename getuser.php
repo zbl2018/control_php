@@ -1,10 +1,5 @@
 <?php
 session_start();
-if(isset($_SESSION['user'])!="")
-{
- header("Location: home.php");
-}
-
 $q=$_GET["q"];
 echo $q;
 //sleep(3);
@@ -17,14 +12,12 @@ if (!$con)
 //mysql_select_db("ajax_demo", $con);
 
 $sql="SELECT air_condition_id FROM C_user_AirCondition_info WHERE user_id = '".$_SESSION['user']."'";
-echo "111";
+// echo "111";
 echo $row['air_condition_id'];
 $res = $con->query($sql);
-
 $row=$res->fetch_array();
 
-
-$sql="SELECT * FROM C_user_AirCondition_info WHERE air_condition_id = '".$row['air_condition_id']."'";
+$sql="SELECT * FROM air_condition_info WHERE air_condition_id = '".$row['air_condition_id']."'";
 
 $res = $con->query($sql);
 

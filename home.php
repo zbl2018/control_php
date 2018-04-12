@@ -9,12 +9,11 @@ if(isset($_SESSION['user'])=="")
 
 <!DOCTYPE html>
 <html lang="utf-8">
-<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <head>
 <script src="js/selectuser.js"></script>
 </head>
 <title>家居信息显示主页</title>
-<link rel="stylesheet" href="css/style.css">
 <body style="text-align:center;">
 选择你要查看家的居信息:
 <select name="users" onchange="showUser(this.value)">
